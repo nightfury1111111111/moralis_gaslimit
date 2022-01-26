@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page</title>
+
+    <!-- ---------CSS----------- -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- -----------BOOTSTRAP------------ -->
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <!-- ----------  FONT------------ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- ---------Font Awesome--------- -->
+
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/fontawesome.css"
+      integrity="sha384-eHoocPgXsiuZh+Yy6+7DsKAerLXyJmu2Hadh4QYyt+8v86geixVYwFqUvMU8X90l"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css"
+    />
+
+    <!-- ----------JS--------- -->
+    <script
+      src="https://code.jquery.com/jquery-migrate-1.1.1.min.js"
+      integrity="sha256-rMxV7BbUk28rgzNCzBKRZVoWOPyCNUHgv1NHx/HWM1Q="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./JS/metamask.js"></script>
+
+    <style></style>
+  </head>
+  <body>
+    <!-- ---------new---------- -->
+    <nav class="navbar navbar-dark navbarbg">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="./assets/logotwo.png" alt="logo" />
+        </a>
+        <button
+          type="button"
+          class="btn firstbutton"
+          data-toggle="modal"
+          data-target="#exampleModal"
+        >
+          CONNECT WALLET
+        </button>
+
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">
+                  Wallet Connect
+                </h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="container">
+                  <button
+                    type="button metabtn"
+                    class="btn btn-primary"
+                    id="connect"
+                    onclick="Connect()"
+                  >
+                    Connect Meta Mask
+                  </button>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button type="button" class="btn btn-primary">
+                  Save changes
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbar-list"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-list">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./assets/Code/index.html">Coin Swap</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- ---------old---------- -->
+    <!-- <div id="navbar">
+      <div class="container">
+        <nav class="navbar justify-content-between">
+          <a href="#" class="navbar-brand"
+            ><img src="./assets/logotwo.png" alt=""
+          /></a>
+
+          Button trigger modal
+          <button
+            type="button"
+            class="btn firstbutton"
+            data-toggle="modal"
+            data-target="#exampleModal"
+          >
+            CONNECT WALLET
+          </button>
+
+          Modal
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">
+                    Wallet Connect
+                  </h5>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="container">
+                    <button
+                      type="button metabtn"
+                      class="btn btn-primary"
+                      id="connect"
+                      onclick="Connect()"
+                    >
+                      Connect Meta Mask
+                    </button>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <button type="button" class="btn btn-primary">
+                    Save changes
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div> -->
+    <br />
+
+    <main>
+      <!-- ------2nd------------- -->
+      <section id="topsecond">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 secondtext">
+              <h6>(Please make sure you are visiting https://gaslimits.com)</h6>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ------------input----------- -->
+      <section id="input">
+        <div class="container inputsec">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="input-group">
+                <input
+                  class="clearable"
+                  type="text"
+                  placeholder="Wallet Address"
+                  class="form-control"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- -------- REWARD COLLECTED SECTION ---------- -->
+
+      <section id="reward">
+        <div class="container rewardsection">
+          <div class="row bothreward">
+            <div class="col-md-6">
+              <h1>Your Wallet</h1>
+              <div class="coinimg">
+                <h1>0</h1>
+                <img src="./assets/logo.png" alt="" />
+              </div>
+              <h5>(0$)</h5>
+              <br />
+              <div class="coinimg">
+                <h1>0</h1>
+                <img src="./assets/binance-usd-busd-logo.png" alt="" />
+              </div>
+              <h5>(0$)</h5>
+              <hr />
+              <h1>Total Earned:</h1>
+              <div class="coinimg">
+                <h1>0</h1>
+                <img src="./assets/binance-usd-busd-logo.png" alt="" />
+              </div>
+              <h5>(0$)</h5>
+            </div>
+
+            <div class="col-md-6">
+              <h1>REWARD NOT COLLECTED</h1>
+              <div class="coinimg">
+                <h1>0</h1>
+                <img src="./assets/binance-usd-busd-logo.png" alt="" />
+              </div>
+              <h5>(0$)</h5>
+
+              <button type="button" class="btn firstbutton">
+                CLAIM MANUALLY
+              </button>
+
+              <h3 id="rewardpara">
+                Rewards are automatically sent every 60 minutes. It can,
+                however, take longer depending on your holdings and trading
+                volume. Rewards will be triggered once they are big enough to
+                cover the gas fees. If you are a smaller holder it may take from
+                a couple hours to a few days for rewards to appear in your
+                wallet. You can also manually claim unclaimed rewards, but you
+                will need to pay the gas fees.
+              </h3>
+            </div>
+          </div>
+        </div>
+      </section>
+      <br />
+      <!-- -----------last part-------- -->
+      <section id="reward">
+        <div class="container lastsection">
+          <div class="row bothreward">
+            <div class="col-md-6">
+              <h1 id="lastparth1">Reward Distributed To Holders</h1>
+              <div class="coinimg">
+                <h1>30077626.539</h1>
+                <img src="./assets/binance-usd-busd-logo.png" alt="" />
+              </div>
+              <h5>(0$)</h5>
+            </div>
+
+            <div class="col-md-6">
+              <div class="lasttop">
+                <p>EGC Contract: 0x3C2e501B08CF5C16061468c96b19b32bae451dA3</p>
+                <button class="btn copybtn" type="button">
+                  <i class="bx bxs-copy"></i>
+                </button>
+              </div>
+              <div class="lasttop">
+                <p>BUSD Contract: 0xe9e7cea3dedca5984780bafc599bd69add087d56</p>
+                <button class="btn copybtn" type="button">
+                  <i class="bx bxs-copy"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.0-rc.0/web3.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function tog(v) {
+        return v ? "addClass" : "removeClass";
+      }
+      $(document)
+        .on("input", ".clearable", function () {
+          $(this)[tog(this.value)]("x");
+        })
+        .on("mousemove", ".x", function (e) {
+          $(this)[
+            tog(
+              this.offsetWidth - 18 <
+                e.clientX - this.getBoundingClientRect().left
+            )
+          ]("onX");
+        })
+        .on("touchstart click", ".onX", function (ev) {
+          ev.preventDefault();
+          $(this).removeClass("x onX").val("").change();
+        });
+    </script>
+  </body>
+</html>
